@@ -48,6 +48,8 @@ public class RegistrationSystem {
      * Main method for testing the RegistrationSystem class.
      */
     public static void main(String[] args) {
+
+        
         RegistrationSystem registrationSystem = new RegistrationSystem();
         Scanner scanner = new Scanner(System.in);
 
