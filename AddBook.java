@@ -70,6 +70,7 @@ public class AddBook {
      * Inner class representing a book.
      */
     private static class Book {
+        
         private String title;
         private String author;
         private String isbn;
