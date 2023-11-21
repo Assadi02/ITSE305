@@ -56,6 +56,7 @@ public class RemoveBook {
      * Main method for testing the RemoveBook class.
      */
     public static void main(String[] args) {
+        
         RemoveBook removeBook = new RemoveBook();
         Scanner scanner = new Scanner(System.in);
 
