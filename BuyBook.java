@@ -58,6 +58,7 @@ public class BuyBook {
      * Displays the current contents of the shopping cart.
      */
     public void displayShoppingCart() {
+        
         if (shoppingCart.isEmpty()) {
             System.out.println("Your shopping cart is empty.");
         } else {
