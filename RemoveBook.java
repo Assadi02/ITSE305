@@ -53,6 +53,14 @@ public class RemoveBook {
     }
 
     /**
+     * Gets the current catalog of books.
+     * @return The catalog of books.
+     */
+    public List<Book> getCatalog() {
+        return catalog;
+    }
+
+    /**
      * Main method for testing the RemoveBook class.
      */
     public static void main(String[] args) {
@@ -76,6 +84,10 @@ public class RemoveBook {
         // Displaying updated catalog (for testing)
         removeBook.displayCatalog();
 
+        // Accessing catalog using the getter method
+        List<Book> catalog = removeBook.getCatalog();
+        System.out.println("Catalog size: " + catalog.size());
+
         scanner.close();
     }
 
@@ -83,7 +95,6 @@ public class RemoveBook {
      * Inner class representing a book.
      */
     private static class Book {
-        
         private String title;
         private String author;
         private String isbn;

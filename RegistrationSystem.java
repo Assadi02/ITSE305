@@ -45,11 +45,17 @@ public class RegistrationSystem {
     }
 
     /**
+     * Gets the current user database.
+     * @return The user database.
+     */
+    public List<String> getUserDatabase() {
+        return userDatabase;
+    }
+
+    /**
      * Main method for testing the RegistrationSystem class.
      */
     public static void main(String[] args) {
-
-        
         RegistrationSystem registrationSystem = new RegistrationSystem();
         Scanner scanner = new Scanner(System.in);
 
@@ -74,6 +80,10 @@ public class RegistrationSystem {
         } else {
             System.out.println("Registration failed. Please try again.");
         }
+
+        // Accessing user database using the getter method
+        List<String> userDatabase = registrationSystem.getUserDatabase();
+        System.out.println("User database size: " + userDatabase.size());
 
         scanner.close();
     }

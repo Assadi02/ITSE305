@@ -38,6 +38,14 @@ public class AddBook {
     }
 
     /**
+     * Gets the current catalog of books.
+     * @return The catalog of books.
+     */
+    public List<Book> getCatalog() {
+        return catalog;
+    }
+
+    /**
      * Main method for testing the AddBook class.
      */
     public static void main(String[] args) {
@@ -63,6 +71,10 @@ public class AddBook {
         // Displaying catalog
         addBook.displayCatalog();
 
+        // Accessing catalog using the getter method
+        List<Book> catalog = addBook.getCatalog();
+        System.out.println("Catalog size: " + catalog.size());
+
         scanner.close();
     }
 
@@ -70,7 +82,6 @@ public class AddBook {
      * Inner class representing a book.
      */
     private static class Book {
-        
         private String title;
         private String author;
         private String isbn;

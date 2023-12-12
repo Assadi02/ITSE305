@@ -1,0 +1,5 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/junit-4.13.2.jar"
+    ]
+}
