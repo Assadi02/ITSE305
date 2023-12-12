@@ -87,6 +87,22 @@ public class BuyBook {
     }
 
     /**
+     * Gets the current catalog of books.
+     * @return The catalog of books.
+     */
+    public List<Book> getCatalog() {
+        return catalog;
+    }
+
+    /**
+     * Gets the current shopping cart.
+     * @return The shopping cart.
+     */
+    public List<Book> getShoppingCart() {
+        return shoppingCart;
+    }
+
+    /**
      * Main method for testing the BuyBook class.
      */
     public static void main(String[] args) {
@@ -115,6 +131,13 @@ public class BuyBook {
 
         // Displaying empty shopping cart after checkout (for testing)
         buyBook.displayShoppingCart();
+
+        // Accessing catalog and shopping cart using the getter methods
+        List<Book> catalog = buyBook.getCatalog();
+        List<Book> shoppingCart = buyBook.getShoppingCart();
+
+        System.out.println("Catalog size: " + catalog.size());
+        System.out.println("Shopping cart size: " + shoppingCart.size());
 
         scanner.close();
     }
