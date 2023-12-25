@@ -1,5 +1,13 @@
 {
     "java.project.referencedLibraries": [
-        "lib/junit-4.13.2.jar"
-    ]
+        "lib/junit-4.13.2.jar",
+        "lib/hamcrest-core-1.3.jar",
+        "lib/hamcrest-library-1.3.jar",
+        "lib/hamcrest-all-1.3.jar",
+        "lib/hamcrest-integration-1.3.jar",
+        "lib/hamcrest-unit-test-1.3.jar",
+
+
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
 }
