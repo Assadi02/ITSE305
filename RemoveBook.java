@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Iterator;
+
 
 public class RemoveBook {
 
@@ -38,6 +40,19 @@ public class RemoveBook {
         System.out.println("Book with ISBN " + isbn + " not found in catalog.");
     }
 
+    public void removeBookByTitle(String title) {
+        Iterator<Book> iterator = catalog.iterator();
+        while (iterator.hasNext()) {
+            Book book = iterator.next();
+            if (book.getTitle().equals(title)) {
+                iterator.remove();
+                System.out.println("Book with title '" + title + "' removed successfully.");
+                return;
+            }
+        }
+        System.out.println("Book with title '" + title + "' not found in catalog.");
+    }
+
     /**
      * Displays the current catalog of books.
      */
@@ -64,6 +79,8 @@ public class RemoveBook {
      * Main method for testing the RemoveBook class.
      */
     public static void main(String[] args) {
+
+        
         
         RemoveBook removeBook = new RemoveBook();
         Scanner scanner = new Scanner(System.in);
@@ -80,8 +97,13 @@ public class RemoveBook {
         System.out.print("\nEnter ISBN of the book to be removed: ");
         String isbn = scanner.nextLine();
 
-        removeBook.removeBook(isbn);
+       
 
+
+        removeBook.removeBook(isbn);
+         System.out.print("\nEnter title of the book to be removed: ");
+        String title = scanner.nextLine();
+        removeBook.removeBookByTitle(title);
         // Displaying updated catalog (for testing)
         removeBook.displayCatalog();
 
@@ -106,6 +128,9 @@ public class RemoveBook {
             this.author = author;
             this.isbn = isbn;
             this.price = price;
+        }
+        public String getTitle() {
+            return title;
         }
 
         public String getIsbn() {
