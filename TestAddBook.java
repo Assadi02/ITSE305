@@ -24,6 +24,20 @@ public class TestAddBook
     }
 
     @Test
+    public void testAddDuplicateBook() {
+        assertEquals(0, addBook.getCatalog().size());
+
+        addBook.addBook("Book1", "Author1", "1234567890", 29.99);
+
+        assertEquals(1, addBook.getCatalog().size());
+
+        // Attempt to add the same book again
+        addBook.addBook("Book1", "Author1", "1234567890", 29.99);
+
+        assertEquals(2, addBook.getCatalog().size());
+    }
+
+    @Test
     public void testCatalogSizeAfterMultipleAdditions() {
         assertEquals(0, addBook.getCatalog().size());
 
