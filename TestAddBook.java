@@ -22,6 +22,8 @@ public class TestAddBook
         assertEquals(1, addBook.getCatalog().size());
     }
 
+
+    
     @Test
     public void testCatalogSizeAfterMultipleAdditions() {
         assertEquals(0, addBook.getCatalog().size());
